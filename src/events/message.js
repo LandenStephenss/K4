@@ -6,6 +6,9 @@ const {
       const client = message.client;
       if (message.author.id === client.user.id || message.author.bot) return
       if (message.channel.type === 'dm') return
+
+
+
       const key = `${message.author.id}`
       client.prefix.ensure(message.guild.id, {prefix: '>'})
       client.points.ensure(key, {user: message.author.id, points: 0, level: 0, })
