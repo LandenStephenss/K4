@@ -1,0 +1,14 @@
+{
+      "token" : "YourToken",
+      "prefix" : ">",
+      "EmbedColor" : 5521613,
+      "ownerID" : "ID",
+      "errors" : {
+            "MissingArgs" : "You are missing an argument!",
+            "Error" : "It seems an error occured.",
+            "MissingMention" : "Please mention a user!",
+            "NoUser" : "I could not find that user.",
+            "MissingPermission" : "I do not have permission to do that.",
+            "UserPerm" : "You do not have permission to do that."
+      }
+}
