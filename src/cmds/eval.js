@@ -10,20 +10,22 @@ exports.run = (client, message, paramaters) => {
 	if (code.includes("client.token")) {
 		message.channel.send("Unable to eval that code!");
 	} else {
+		const hrStart = process.hrtime();
 		new Promise(r => r(eval(code))).then(evaled => {
 			if (util.inspect(evaled, {
 					depth: 0
 				}).includes(client.token) || util.inspect(evaled, { depth: 0 }).includes(client.token.toLowerCase()) || util.inspect(evaled, {depth: 0 }).includes(client.token.toUpperCase())) {
 				message.channel.send("Unable to eval that code!");
 			} else {
+				hrDiff = process.hrtime(hrStart);
 				message.channel.send({
 					embed: {
-						title: "Success!",
+						title: `Success! || Evaled in ${hrDiff[0] > 0 ? `${hrDiff[0]}s ` : ''}${hrDiff[1] / 1000000}ms`,
 						color: "1048335",
 						description: `Input: :inbox_tray:\n\`\`\`js\n${code}\`\`\`\nOutput: :outbox_tray: \`\`\`js\n${util.inspect(evaled, {
 							depth: 0}
 							)}\`\`\``
-					}
+										}
 				});
 			}
 		}).catch(err => {

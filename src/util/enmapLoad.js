@@ -6,4 +6,5 @@ client.DickSize = new enmap({name: 'DickSize'})
 client.howgay = new enmap({name: 'howgay'})
 client.RPSWins = new enmap({name: 'RPSWins'})
 client.prefix = new enmap({name: 'prefix'})
+client.muteRole = new enmap({name: 'role'})
 }
