@@ -1,6 +1,11 @@
 const { Discord, RichEmbed } = require('discord.js')
 const { EmbedColor, errors } = require('../settings.json');
 exports.run = (client, message, paramaters) => {
+
+      if(paramaters.includes('@everyone') || paramaters.includes('@here')) {
+            return message.channel.send('You cannot ping everyone/here.')
+      }
+
       const messageToSay = paramaters.join(" ")
       if(!messageToSay) {
           message.channel.send(errors.MissingArgs)
