@@ -9,7 +9,7 @@ exports.run = (client, message, paramaters) => {
       if (client.cmds.has(paramaters[0])) {
         command = paramaters[0];
       } 
-      const botLog = client.guilds.get("558788402590384159").channels.get("585151247234105354")
+      const botLog = client.guilds.get("592100762826309673").channels.get("592116762657685525")
       if (!client.cmds.has(command)) {
         return message.channel.send(`I cannot find the command: **${paramaters[0]}**`); // This is ran if there is no command by that name
       } else {

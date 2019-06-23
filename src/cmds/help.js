@@ -19,7 +19,7 @@ if(!paramaters[0]) {
 const Help = new RichEmbed()
 Help.setFooter(`Prefix for ${message.guild.name} is ${client.prefix.get(message.guild.id).prefix}`)
 Help.setTitle(`Commands (${client.cmds.size})`)
-Help.setURL('https://discord.gg/Pj8jPQq')
+Help.setURL('https://discord.gg/wnrcsU7')
 if(message.author.id === '222563393649901580') {
 	Help.addField(`Developer ⚙(${GatherCommands('developer').length})`, `\`${GatherCommands('developer').join("\`, \`")}\``)
 }

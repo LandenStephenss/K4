@@ -4,7 +4,7 @@ module.exports = client => {
      
       client.user.setActivity(`${client.users.size} Users`, { type: 'WATCHING' })
       setInterval(function() {
-            client.guilds.get('586327918855061508').channels.get("591087351816519701").setName(`Users: ${client.users.size}`)
+            client.guilds.get('592100762826309673').channels.get("592104987816099890").setName(`Users: ${client.users.size}`)
             client.user.setActivity(`${client.users.size} Users`, { type: 'WATCHING' })
       }, 10000)
 

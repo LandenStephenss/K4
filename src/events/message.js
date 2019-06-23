@@ -26,7 +26,7 @@ const {
         }
         else if (!BotPerms.every(f => message.guild.me.hasPermission(f))) {
           return message.channel.send(errors.MissingPermission)
-        } else if(cmd.info.category === 'developer' && message.author.id !== "222563393649901580") {
+        } else if(cmd.info.category === 'developer' && message.author.id !== "546097012269907989") {
             message.channel.send('You cannot use **developer only** commands!')
         } else if(cmd.info.category === 'nsfw' && message.channel.nsfw === false) {
               message.channel.send('You cannot use **NSFW** commands in a non-NSFW channel!')
