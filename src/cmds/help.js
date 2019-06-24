@@ -20,7 +20,7 @@ const Help = new RichEmbed()
 Help.setFooter(`Prefix for ${message.guild.name} is ${client.prefix.get(message.guild.id).prefix}`)
 Help.setTitle(`Commands (${client.cmds.size})`)
 Help.setURL('https://discord.gg/wnrcsU7')
-if(message.author.id === '222563393649901580') {
+if(message.author.id === '546097012269907989') {
 	Help.addField(`Developer ⚙(${GatherCommands('developer').length})`, `\`${GatherCommands('developer').join("\`, \`")}\``)
 }
 if(message.member.hasPermission('KICK_MEMBERS')) {

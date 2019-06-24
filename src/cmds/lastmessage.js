@@ -5,7 +5,7 @@ exports.run = (client, message, paramaters) => {
       let user = message.guild.members.get(paramaters[0]) || message.mentions.members.first() 
 
       if(!user) {
-            return message.channel.send(`Please mention a user!`)
+            return message.channel.send(`Please mention a user or use an ID!`)
       }
       
       const embed = new RichEmbed()

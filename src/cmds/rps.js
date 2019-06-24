@@ -42,7 +42,7 @@ exports.run = (client, message, paramaters) => {
 
     if(!choice || choices.includes(choice) === false) {
 		const NoArgsEmbed = new RichEmbed()
-		.setColor(client.EmbedColor)
+		.setColor(EmbedColor)
 		.setTitle('No Arguments!')
 		.addField(`Please provide one of the following!`, `**${choices.join("**, **")}**`)
 		.addField(`Wins`, `**${client.RPSWins.get(key, "rpsWins")}**`)
