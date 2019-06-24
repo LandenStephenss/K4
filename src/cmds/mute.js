@@ -8,9 +8,7 @@ if(!user) {
 } 
 try {
 if(user.roles.has(Role.id)) {
-      message.channel.send(`${user.user.tag} has been unmuted!`)
-      user.send(`You were unmuted in ${message.guild.name}`)
-      user.removeRole(Role.id)
+      message.channel.send(`${user.user.tag} is already muted!`)
 } else if(!user.roles.has(Role.id)) {
       message.channel.send(`${user.user.tag} has been muted!`)
       user.send(`You were muted in ${message.guild.name}`)
