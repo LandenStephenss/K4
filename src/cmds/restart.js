@@ -10,7 +10,7 @@ message.channel.send('Restarting...').then(q => process.kill(0))
 exports.info = {
       name: 'restart',
       category: 'developer',
-      aliases: ['r'],
+      aliases: ['r', 'kys'],
       usage: 'restart',
       botPermissions: ['EMBED_LINKS', 'SEND_MESSAGES'],
       userPermissions: [],

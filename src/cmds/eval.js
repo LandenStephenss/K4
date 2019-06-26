@@ -1,7 +1,6 @@
 const { Discord, RichEmbed } = require('discord.js')
 const { EmbedColor, token } = require('../settings.json');
 exports.run = (client, message, paramaters) => {
-
 	const code = paramaters.join(" ");
 	const util = require("util");
 	if (code < 1) {
