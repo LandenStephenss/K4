@@ -9,7 +9,7 @@ exports.run = (client, message, paramaters) => {
 			}
 		})
 		if(cmds.length === 0) {
-			return "No commands!"
+			return ["No commands!"]
 		} else if(cmds.length > 0) {
 		return cmds
 		}
@@ -21,8 +21,11 @@ Help.setFooter(`Prefix for ${message.guild.name} is ${client.prefix.get(message.
 Help.setTitle(`Commands (${client.cmds.size})`)
 Help.setURL('https://discord.gg/wnrcsU7')
 if(message.author.id === '546097012269907989') {
-	Help.addField(`Developer ⚙(${GatherCommands('developer').length})`, `\`${GatherCommands('developer').join("\`, \`")}\``)
+	Help.addField(`Developer 👎(${GatherCommands('developer').length})`, `\`${GatherCommands('developer').join("\`, \`")}\``)
 }
+if(message.member.hasPermission('ADMINISTRATOR')) {
+	Help.addField(`Settings ⚙ (${GatherCommands('settings').length})`, `\`${GatherCommands('settings').join("\`, \`")}\``)
+     }
 if(message.member.hasPermission('KICK_MEMBERS')) {
 	Help.addField(`Moderation 🚓 (${GatherCommands('moderation').length})`, `\`${GatherCommands('moderation').join("\`, \`")}\``)
      }
