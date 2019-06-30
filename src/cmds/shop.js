@@ -14,7 +14,7 @@ if(!params[0]) {
       .setTitle('Shop!')
       .addField(`Security System - 10,000`, 'Never get robbed again! __Run **>shop Security** to buy__')
       message.channel.send(Shop)
-} if(params[0] === "Security") {
+} if(params[0].toLowerCase() === "security") {
       if(client.Currency.get(key).SecSys === true) {
             message.channel.send(`You already have a **Security System**`)
       } else if(client.Currency.get(key).balance < 10000) {
@@ -24,7 +24,9 @@ if(!params[0]) {
       } else {
             client.Currency.set(key, {balance: client.Currency.get(key).balance, lastUsed: client.Currency.get(key).lastUsed, SecSys: true})
             message.channel.send(`You bought the **Security System**`)
-      }
+      }  
+} else {
+      message.channel.send('Invalid option, try using `>shop` to view the list of items.')
 }
 
 

@@ -1,10 +1,8 @@
 const {
-	Discord,
 	RichEmbed
     } = require('discord.js')
     const {
-	EmbedColor,
-	prefix
+	EmbedColor
     } = require('../settings.json');
     exports.run = (client, message, paramaters) => {
 	function GatherCommands(cmdCategory) {
