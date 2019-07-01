@@ -47,12 +47,12 @@ const {
 		message.channel.send(evalEmbed);
 	    }
 	  }).catch(err => {
+			hrDiff = process.hrtime(hrStart);
 		const evalFail = new RichEmbed()
 		.setTitle(`Error! || Evaled in ${hrDiff[0] > 0 ? `${hrDiff[0]}s ` : ''}${hrDiff[1] / 1000000}ms`)
 		.setColor(16715535)
 		.addField('📥 Input:', `\`\`\`js\n${code}\`\`\``)
 		.addField('📤 Output: ', `\`\`\`js\n${err}\`\`\``)
-		.setFooter(`Type: ${type}`)
 		message.channel.send(evalFail);
 	  });
 	}
