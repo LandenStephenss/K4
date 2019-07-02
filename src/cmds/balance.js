@@ -13,7 +13,14 @@ const {
         lastUsed: null,
         SecSys: false
       })
-      const balEmbed = new RichEmbed().addField(`${user.user.tag}'s balance!`, `${client.Currency.get(key).balance} Coins!`).setColor(EmbedColor)
+      client.Bank.ensure(key, {
+        balance: 0
+      })
+      const balEmbed = new RichEmbed()
+      .setTitle(`${user.user.tag}'s balance!`)
+      .addField('Wallet', `${client.Currency.get(key).balance} Coins`, true)
+      .addField('Bank', client.Bank.get(message.author.id).balance + ' Coins', true)
+      .setColor(EmbedColor)
       message.channel.send(balEmbed)
     };
     exports.info = {

@@ -2,7 +2,8 @@ const {
 	RichEmbed
     } = require('discord.js')
     const {
-	EmbedColor
+	EmbedColor,
+	ownerID
     } = require('../settings.json');
     exports.run = (client, message, paramaters) => {
 	function GatherCommands(cmdCategory) {
@@ -24,7 +25,7 @@ const {
 	  Help.setFooter(`Prefix for ${message.guild.name} is ${client.prefix.get(message.guild.id).prefix}`)
 	  Help.setTitle(`Commands (${client.cmds.size})`)
 	  Help.setURL('https://discord.gg/wnrcsU7')
-	  if (message.author.id === '546097012269907989') {
+	  if (message.author.id === ownerID) {
 	    Help.addField(`Developer 👎(${GatherCommands('developer').length})`, `\`${GatherCommands('developer').join("\`, \`")}\``)
 	  }
 	  if (message.member.hasPermission('ADMINISTRATOR')) {
